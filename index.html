@@ -15,7 +15,7 @@
           class="search__input"
           placeholder="Search Tasks"
         />
-        <span class="search__icon">
+        <span class="search__icon icon">
           <img src="assets/search-icon.svg" alt="Search Icon" />
         </span>
       </div>
@@ -23,7 +23,7 @@
         <form id="task-form">
           <input type="text" id="input-field" placeholder="Add Tasks" />
           <button type="submit" class="add-btn">
-            <span>
+            <span class="icon">
               <img src="assets/add-icon.svg" alt="Add Icon" />
             </span>
           </button>
@@ -31,25 +31,21 @@
       </div>
       <div class="tasks">
         <div class="tasks__selector">
-          <div class="tasks__selector-item" id="all-tasks-top">All Tasks</div>
-          <div class="tasks__selector-item" id="completed-tasks-top">
+          <div
+            class="tasks__selector-item tasks__selector--active"
+            id="all-tasks"
+          >
+            All Tasks
+          </div>
+          <div class="tasks__selector-item" id="completed-tasks">
             Completed Tasks
           </div>
-          <div class="tasks__selector-item" id="incomplete-tasks-top">
+          <div class="tasks__selector-item" id="incomplete-tasks">
             Incomplete Tasks
           </div>
         </div>
-        <div id="all-tasks" class="tasks__wrapper">
-          <h2>All Tasks</h2>
-          <ul id="all-tasks-list" class="tasks__list"></ul>
-        </div>
-        <div id="completed-tasks" class="tasks__wrapper">
-          <h2>Completed Tasks</h2>
-          <ul id="completed-tasks-list" class="tasks__list"></ul>
-        </div>
-        <div id="incomplete-tasks" class="tasks__wrapper">
-          <h2>Incomplete Tasks</h2>
-          <ul id="incomplete-tasks-list" class="tasks__list"></ul>
+        <div class="tasks__wrapper">
+          <ul id="tasks-list" class="tasks__list"></ul>
         </div>
       </div>
     </div>

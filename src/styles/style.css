@@ -26,11 +26,17 @@ button {
   cursor: pointer;
 }
 
+.icon {
+  display: flex;
+  align-items: center;
+}
+
 input {
   width: 100%;
   padding: 20px 30px;
   border-radius: 20px;
   line-height: 1;
+  box-sizing: border-box;
 }
 
 .search {
@@ -98,9 +104,7 @@ input {
   border: 3px solid #aaa;
   background: none;
 }
-.tasks__button-delete {
-  text-decoration: none;
-}
+
 .tasks__selector {
   width: 100%;
   display: flex;
@@ -116,6 +120,9 @@ input {
   cursor: pointer;
   z-index: 2;
 }
+.tasks__selector--active {
+  box-shadow: 0px 40px 30px -30px rgba(0, 0, 0, 0.5) inset;
+}
 .tasks__wrapper {
   padding: 30px 0;
   position: absolute;
@@ -124,14 +131,6 @@ input {
   background: #ddd;
   border-radius: 0 0px 15px 15px;
   box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5);
-}
-
-#all-tasks {
-  z-index: 1;
-}
-
-#all-tasks-top {
-  box-shadow: 0px 40px 30px -30px rgba(0, 0, 0, 0.5) inset;
 }
 
 .task--completed {
