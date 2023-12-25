@@ -2,12 +2,57 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="container">
+      <h1>TO DO List</h1>
+      <div class="search">
+        <input
+          type="text"
+          id="search-input"
+          class="search__input"
+          placeholder="Search Tasks"
+        />
+        <span class="search__icon">
+          <img src="assets/search-icon.svg" alt="Search Icon" />
+        </span>
+      </div>
+      <div class="add-task">
+        <form id="task-form">
+          <input type="text" id="input-field" placeholder="Add Tasks" />
+          <button type="submit" class="add-btn">
+            <span>
+              <img src="assets/add-icon.svg" alt="Add Icon" />
+            </span>
+          </button>
+        </form>
+      </div>
+      <div class="tasks">
+        <div class="tasks__selector">
+          <div class="tasks__selector-item" id="all-tasks-top">All Tasks</div>
+          <div class="tasks__selector-item" id="completed-tasks-top">
+            Completed Tasks
+          </div>
+          <div class="tasks__selector-item" id="incomplete-tasks-top">
+            Incomplete Tasks
+          </div>
+        </div>
+        <div id="all-tasks" class="tasks__wrapper">
+          <h2>All Tasks</h2>
+          <ul id="all-tasks-list" class="tasks__list"></ul>
+        </div>
+        <div id="completed-tasks" class="tasks__wrapper">
+          <h2>Completed Tasks</h2>
+          <ul id="completed-tasks-list" class="tasks__list"></ul>
+        </div>
+        <div id="incomplete-tasks" class="tasks__wrapper">
+          <h2>Incomplete Tasks</h2>
+          <ul id="incomplete-tasks-list" class="tasks__list"></ul>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
